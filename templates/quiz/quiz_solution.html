@@ -1,0 +1,63 @@
+{% extends '__base.html' %}
+{% load i18n %}
+{% block extra_js %}
+    <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+      });
+    </script>
+{% endblock %}
+{% block page_header %} {{ quiz.name }} {%trans "solutions"%} {% endblock %}
+{% block content %}
+<div class="container">
+    <ol>
+    {% for q in questions %}
+    <li>
+        <div class="row">
+            <strong> {% trans "Question"%}: </strong>
+            <br/> <br/>
+            <span>
+                {% if q.content %}
+                     {{ q.content }}
+                {% endif %}
+                <br/>
+                {% if q.figure %}
+                    <img src={{ q.figure.url }}
+                        class="question-figure">
+                {% endif %}
+            </span>
+        </div>
+        {% with correct_answer=q.get_correct_answer %}
+          <div class="row">
+            {% if correct_answer.content %}
+            </br> <strong>{% trans "Correct choice"%}:</strong>
+            <b> {{ correct_answer.content }}</b>
+            </br>
+            {% endif %}
+            {% if correct_answer.figure %}
+                </br>
+                <strong>{% trans "Correct choice figure"%}:</strong> </br>
+                <img class=answer-figure src={{correct_answer.figure.url}}>
+            {% endif %}
+            {% if q.solution %}
+                </br>
+                <strong> {% trans "Solution"%}: </strong>
+                </br>
+                <b> {{ q.solution }} </b>
+                </br>
+            {% endif %}
+            {% if q.solutionfigure %}
+                </br>
+                <strong>{% trans "Solution figure"%}:</strong>
+                <img src={{q.solutionfigure.url}} class="solution-figure">
+            {% endif %}
+          </div>
+        {% endwith %}
+    </li>
+    <br/> <br/>
+    {% endfor %}
+    </ol>
+</div>
+{% endblock %}

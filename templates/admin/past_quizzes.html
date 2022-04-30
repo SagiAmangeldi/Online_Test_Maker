@@ -1,0 +1,31 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+    {% if past_attempts %}
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Quiz Name</th>
+          <th>Attempt</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for attempt in past_attempts %}
+        <tr>
+          <td>{{attempt.quiz.name}}</td>
+          <td>{{attempt.date | date:'Y-m-d H:i' }}</td>
+          <td>
+                <a href="{% url 'quiz_results' user_id=attempt.student.pk quiz_id=attempt.quiz.pk  attempt_id=attempt.pk %}">
+                    {{attempt.score}} / {{attempt.quiz.question_count}}
+                </a>
+            </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+        User has not taken any quizzes.
+    {% endif %}
+{% endblock %}

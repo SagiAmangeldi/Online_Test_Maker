@@ -1,0 +1,8 @@
+Django
+#https://github.com/ubernostrum/django-registration.git
+django-super-inlines
+Pillow
+pinax-eventlog
+django_markdown
+Django-Select2==5.8.10
+-e git://github.com/darklow/django-suit.git@v2#egg=django-suit

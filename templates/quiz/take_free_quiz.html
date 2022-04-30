@@ -1,0 +1,77 @@
+{% extends "__base.html" %}
+{% load staticfiles i18n %}
+
+{% block title %} {{ quiz.name }} {% endblock %}
+
+{% block extra_js %}
+    {% include "general/_mathjax.html" %}
+{% endblock %}
+
+{% block extra_css %}
+    <link href="{% static 'css/quiz/quiz.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/quiz/take_quiz.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block page_header %} {{ quiz.name }} {% endblock %}
+
+{% block content %}
+<div class="container main-block">
+    <form action="{% url 'quiz:free_quiz_result' quiz.id %}" method="POST" class="form-horizontal">
+        {% csrf_token %}
+
+        {% if form_error %}
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <p> <strong> {{ form_error }} </strong></p>
+        </div>
+        {% endif %}
+
+<ol class="questions-list">
+        {% for question in quiz.question_set.all %}
+        <li>
+        <div class="container question-block">
+            <div class="row question-row">    
+                <p>
+                    {% if question.content %}
+                         {{ question.content }}
+                    {% endif %}
+                </p>
+                {% if question.figure %}
+                    <img src={{ question.figure.url }} class="img-responsive center-block">
+                {% endif %}
+            </div>
+            <div class="row answers-row">
+                <ol class="answers-list list-inline">
+                {% for answer in question.answer_set.all %}
+                    <li class="text-center">
+                            <input id="id_question_{{question.pk}}_{{forloop.counter}}"
+                                        name="question_{{question.pk}}"
+                                        type="radio"
+                                        value="{{ answer.pk }}"
+                                        required/>
+                            <label for="id_question_{{question.pk}}_{{forloop.counter}}">
+                                <span>
+                                    {% if answer.content %}
+                                        {{answer.content }}
+                                    {% endif %}
+                                    {% if answer.figure %}
+                                        <img class="answer-figure img-responsive" src={{answer.figure.url}}>
+                                    {% endif %}
+                                </span>
+                            </label>
+                    </li>
+                {% endfor %}
+                </ol>
+            </div>
+        </div>
+        </li>
+        {% endfor %}
+        </ol>
+        <div class="center-block text-center">
+            <button type="submit" class="btn btn-primary btn-lg">{%trans "Submit"%}</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

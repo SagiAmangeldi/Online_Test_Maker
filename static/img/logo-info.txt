@@ -1,0 +1,2 @@
+logo-txt-color (reddish): ad2a1a
+font: gloria-hallelulaj

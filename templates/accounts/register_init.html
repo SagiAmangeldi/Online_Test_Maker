@@ -1,0 +1,23 @@
+{% extends "__base.html" %}
+{% load i18n %}
+{% block title %} {%trans "Registration"%} {%endblock%}
+
+{% block content %}
+    <div class="container">
+        <form id="user_form" accept-charset="UTF-8"
+        action="{% url 'register' %}" class="form-signin" role="form"
+        method="post">
+            {% csrf_token %}
+            {% if form.is_bound and not form.is_valid %}
+                {% include "general/_form_errors.html" %}
+            {% endif %}
+            {% for field in form.visible_fields %}
+                {% include "accounts/_field.html" %}
+            {% endfor %}
+            </br>
+            <div class="actions">
+                <input class="btn btn-lg btn-primary" name="commit" type="submit" value="{%trans 'Register'%}">
+            </div>
+        </form>
+    </div>
+{% endblock %}

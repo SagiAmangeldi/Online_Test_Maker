@@ -1,0 +1,35 @@
+{% extends '__base.html' %}
+{% load staticfiles i18n %}
+
+{% block title %} {% trans "In order to purchase stars, please follow the below instructions."%} {% endblock %}
+{% block content %}
+<div class="container block-center" style="font-size: 2rem;">
+        {%blocktrans%}
+          <h1>Star Purchase Instructions</h1>
+          <br>
+           <table border=0 class="rounded-list">
+              <tr>
+                  <td>
+                  <ol>
+                  <li><p>Start with "Qiwi Wallet" in the main screen and selec "fill Qiwi Wallet" option.</p></li>
+                  <li><p>Enter the Qiwi Walled number as <strong>+7-(775)-368-68-70</strong>.</p></li>
+                  <li><p>Enter your dayindal.com username <strong>{{request.user.username}}</strong> in the comments section.</p></li>
+                  <li><p>Insert money and keep the receipt.</p></li>
+                  <li><p>If the transferred amount does not appear in your profile within 24 hours, send an email to support@dayindal.com attaching your receipt.</p></li>
+                  </ol>
+                  </td>
+              </tr>
+          </table>
+        {%endblocktrans%}
+</div>
+<div class="container block-center">
+    <hr>
+    <ol>
+        <li> <img src="{% static 'img/qiwi/qiwi_1.jpg' %}" alt="Qiwi 1"> </li>
+        <li> <img src="{% static 'img/qiwi/qiwi_2.jpg' %}" alt="Qiwi 2"> </li>
+        <li> <img src="{% static 'img/qiwi/qiwi_3.jpg' %}" alt="Qiwi 3"> </li>
+        <li> <img src="{% static 'img/qiwi/qiwi_4.jpg' %}" alt="Qiwi 4"> </li>
+        <li> <img src="{% static 'img/qiwi/qiwi_5.jpg' %}" alt="Qiwi 5"> </li>
+    </ol>
+</div> <!--/ .container -->
+{% endblock %}

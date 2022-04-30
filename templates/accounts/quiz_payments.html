@@ -1,0 +1,33 @@
+{% extends '__base.html' %}
+{% load staticfiles i18n %}
+
+{% block content %}
+<div class="container">
+  {% url "purchase_stars" as purchase_stars_url %}
+  <p style="font-size: 2rem;">* {% trans 'Click here for instructions to purchase new stars' %}: <a href="{{purchase_stars_url}}"> LINK</a> </p>
+  <br>
+    {% if quiz_payments %}
+        <h4 class="centered"> {%trans "Your Quiz Payments"%} </h4>
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>{% trans "Quiz Name"%}</th>
+              <th>{% trans "Amount"%}</th>
+              <th>{% trans "Payment Date"%}</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for payment in quiz_payments %}
+            <tr>
+              <td>{{payment.quiz.name}}</td>
+              <td>{{payment.amount}} <span> <i class="glyphicon glyphicon-star"></i> </span></td>
+              <td>{{payment.payment_date | date:'Y-m-d H:i' }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+    {% else %}
+      {% trans "You haven't made any quiz payments." %}
+    {% endif %}
+</div>
+{% endblock %}

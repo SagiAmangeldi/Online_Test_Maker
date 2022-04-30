@@ -1,0 +1,37 @@
+{% extends "__base.html" %}
+{% load i18n %}
+
+{% block extra_js %}
+<script>
+ga('send', 'event', 'Users', 'register');
+</script>
+{% endblock %}
+
+{% block title %} {%trans "Actvate registration"%}  {% endblock %}
+
+{% block content %}
+<div class="container" style="width: 80%">
+        <h3>
+            {% trans "Please activate your registration by clicking on the link sent to your e-mail." %}
+        </h3>
+</div>
+<!-- Google Code for signupfromg Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 928321654;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "jh2ZCPOJ7mMQ9qDUugM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/928321654/?label=jh2ZCPOJ7mMQ9qDUugM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+{% endblock %}

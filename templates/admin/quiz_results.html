@@ -1,0 +1,75 @@
+{% extends '__base.html' %}
+{% load i18n staticfiles %}
+{% block extra_css %}
+ <link href="{% static 'css/quiz/quiz.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block extra_js %}
+    {% include "general/_mathjax.html" %}
+    <script src="{% static "js/validate_input.js" %}"></script>
+{% endblock %}
+
+{% block page_header %}
+    {% blocktrans with score=score question_count=quiz.question_count quiz_name=quiz.name %}
+        You scored {{ score }} out of {{question_count }} on {{ quiz_name }}
+    {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <ol>
+        {% for qr in result_list %}
+        <li>
+            <div class="container">
+                <div class="row">
+                    <span>
+                        {% if qr.0.content %}
+                             {{ qr.0.content }}
+                        {% endif %}
+                        <br/>
+                        {% if qr.0.figure %}
+                            <img src={{ qr.0.figure.url }}
+                                class="question-figure">
+                        {% endif %}
+                    </span>
+                </div>
+                <br/> <br/>
+                <div class="row">
+                    {% for answer in qr.0.get_answers %}
+                        {% if answer.is_correct %}
+                            <div class="col-md-3 quiz-answer quiz-answer-right">
+                            <span id="quiz-mark-right" class="glyphicon glyphicon-ok"> </span>
+                        {% else %}
+                            {% if answer == qr.1 %}
+                                <div class="col-md-3 quiz-answer quiz-answer-wrong">
+                                <span id="quiz-mark-wrong" class="glyphicon glyphicon-remove"> </span>
+                            {% else %}
+                                <div class="col-md-3 quiz-answer quiz-answer">
+                            {% endif %}
+                        {% endif %}
+                        <input type="radio" name="foo" value="N" disabled>
+                        {% if answer.content %}
+                            <p> {{ answer.content }} </p>
+                        {% endif %}
+                        {% if answer.figure %}
+                            <img class="answer-figure"
+                                src={{answer.figure.url}} class="answer-figure">
+                        {% endif %}
+                            </div>
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    {% if qr.0.solution %}
+                    {%trans "Solution" %}:</br>
+                        <p> {{ qr.0.solution }} </p> </br>
+                    {% endif %}
+                    {% if qr.0.solutionfigure %}
+                        <img src={{qr.0.solutionfigure.url}} class="solution-figure">
+                    {% endif %}
+                </div>
+            </div>
+        </li>
+        <hr>
+        {% endfor %}
+    </ol>
+</div>
+{% endblock %}

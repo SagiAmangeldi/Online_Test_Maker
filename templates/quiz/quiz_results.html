@@ -1,0 +1,94 @@
+{% extends '__base.html' %}
+{% load i18n staticfiles %}
+{% block extra_css %}
+    <link href="{% static 'css/quiz/quiz.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/quiz/quiz_results.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block extra_js %}
+    {% include "general/_mathjax.html" %}
+    <script src="{% static "js/validate_input.js" %}"></script>
+{% endblock %}
+
+{% block page_header %}
+    {% blocktrans with score=score question_count=quiz.question_count quiz_name=quiz.name %}
+        You scored {{ score }} out of {{question_count }} on {{ quiz_name }}
+    {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+<div class="container main-block">
+    <ol class="questions-list">
+    {% for qr in result_list %}
+        <li>
+        <div id="result-div" class="container question-block">
+            <div class="row question-row">
+                <p>
+                    {% if qr.0.content %}
+                         {{ qr.0.content }}
+                    {% endif %}
+                </p>
+                {% if qr.0.figure %}
+                    <img src={{ qr.0.figure.url }} class="img-responsive center-block">
+                {% endif %}
+            </div>
+            <div class="row answers-row">
+                <ol class="answers-list list-inline">
+                {% for answer in qr.0.get_answers %}
+                    <li class="text-center {% if answer.is_correct %} right-answer {% endif %} {% if not answer.is_correct and answer == qr.1 %} wrong-answer {% endif %}">
+                        <span>
+                            {% if answer.content %}
+                                {{answer.content }}
+                            {% endif %}
+                            {% if answer.figure %}
+                                <img class="answer-figure img-responsive" src={{answer.figure.url}}>
+                            {% endif %}
+                        </span>
+                    </li>
+                {% endfor %}
+                </ol>
+            </div>
+            <div class="row solution-row">
+                {% if qr.0.solution %}
+                    <p> {%trans "Solution" %}: </p>
+                    <p> {{ qr.0.solution }} </p> 
+                {% endif %}
+            
+                {% if qr.0.solutionfigure %}
+                    <img src={{qr.0.solutionfigure.url}} class="center-block">
+                {% endif %}
+            </div>
+        </div>
+        </li>
+    {% endfor %}
+    </ol>
+    {% if is_public_test %}
+        </hr>
+        <div class="row centered">
+            <div class="col-lg-6 col-xs-12 col-lg-offset-3">
+                <h3 class="text-center">Осы секiлдi 40-тан астам тест тапсырып деңгейiңiздi бақылау үшiн сайтқа тiркелiңiз!</h3>
+                <form name="reg_form" role="form" accept-charset="UTF-8" action="{% url 'register' %}" method="POST" onsubmit="return validateForm();">
+                    {% csrf_token %}
+                    <h2 class="text-center">{% trans "Registration"%}</h2>
+                    <hr class="colorgraph">
+                    <div class="form-group">
+                        <input type="text" name="username" id="username" class="form-control input-lg" placeholder="{% trans 'Username' %}" tabindex="4">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="{% trans 'Email Address' %}" tabindex="4">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password1" id="password1" class="form-control input-lg" placeholder="{% trans 'Password'%}" tabindex="5">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password2" id="password2" class="form-control input-lg" placeholder="{% trans 'Re-enter password'%}" tabindex="6">
+                    </div>
+                    <hr class="colorgraph">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12"><input type="submit" value="{% trans 'Register'%}" class="btn btn-success btn-block btn-lg" tabindex="7"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

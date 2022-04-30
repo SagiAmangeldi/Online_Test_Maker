@@ -1,0 +1,25 @@
+{% extends "__base.html" %}
+{%load i18n %}
+
+{% block extra_js %}
+<script>
+    ga('send', 'event', 'Users', 'activate');
+</script>
+
+<script>
+    function redirect(){
+       window.location.href = "{%url 'main_page'%}";
+    }
+
+    setTimeout(redirect, 1500); //2000 is equivalent to 2 seconds
+</script>
+{% endblock %}
+
+
+{% block title %} {%trans "Account activation"%} {% endblock %}
+
+{% block content %}
+	<div class="container" style="width: 80%">
+	    <h3>{% trans "Your account has been activated, welcome to www.dayindal.com!" %} </h3>
+	</div>
+{% endblock %}

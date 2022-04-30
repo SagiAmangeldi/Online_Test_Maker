@@ -1,0 +1,61 @@
+{% extends '__base.html' %}
+{% load i18n %}
+
+{%block extra_js %}
+    <script>
+        function clicked(e)
+        {
+            if(!confirm('Are you sure?'))e.preventDefault();
+        }
+    </script>
+{% endblock %}
+
+{% block title %} {%trans "Transfer Points"%}{% endblock %}
+
+{% block content %}
+    {% if form.errors %}
+        <div class="container">
+            <div class="alert alert-warning alert-dismissible" role="alert">
+                <p> <strong> {%trans "Please correct the errors below."%}</strong></p>
+            </div>
+        </div>
+    {% endif %}
+    {% if form_error %}
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <p> <strong> {{ form_error }} </strong></p>
+        </div>
+    {% endif %}
+    <form class="form-horizontal" role="form" method="post" action="transfer_stars">
+         {% csrf_token %}
+        <div class="form-group">
+            <label for="username" class="col-sm-4 control-label">{%trans "Username of the person receiving:"%}</label>
+            <div class="col-sm-4">
+                {{form.username}}
+            </div>
+            {% if form.username.errors %}
+                <div class="col-sm-4">
+                    {{ form.username.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            <label for="amount" class="col-sm-4 control-label">{%trans "Amount of points to send:"%}</label>
+            <div class="col-sm-4">
+                {{form.amount}}
+            </div>
+            {% if form.amount.errors %}
+                <div class="col-sm-4">
+                    {{ form.amount.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+                <input id="submit" name="submit" type="submit" value="{%trans 'Send'%}" class="btn btn-primary"  onclick="clicked(event)">
+            </div>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends '__base.html' %}
+{% load staticfiles i18n %}
+
+{% block title %} {%trans "Your Star Purchases"%} {% endblock %}
+
+{% block content %}
+<div class="container">
+    {% if star_purchases %}
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>{% trans "Amount"%}</th>
+              <th>{% trans "Comment"%}</th>
+              <th>{% trans "Purchase Date"%}</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for purchase in star_purchases %}
+            <tr>
+              <td>{{purchase.amount}} <span> <i class="glyphicon glyphicon-star"></i> </span></td>
+              <td>{{purchase.comment}}</td>
+              <td>{{purchase.purchase_date | date:'Y-m-d H:i' }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+    {% else %}
+        {% url "purchase_stars" as purchase_stars_url %}
+        {% blocktrans %}
+            You haven't made any star purchases. To purchase stars, click <a href="{{purchase_stars_url}}"> here. </a>
+        {% endblocktrans %}
+    {% endif %}
+</div>
+{% endblock %}

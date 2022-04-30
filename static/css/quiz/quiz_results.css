@@ -1,0 +1,39 @@
+.answers-list > li span:before {
+  content: counter(abc, upper-alpha);
+  position: absolute;
+  left: -1.75em;
+  top: 0.1em;
+  width: 3rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 1px solid black;
+  color: #555555;
+  text-align:center;
+  font-size: 0.85em;
+  line-height: 2.3rem;
+}
+
+.answers-list > li.wrong-answer span:before {
+    color: #FFFFFF;
+    background-color: #FF0000;
+    font-family: FontAwesome;
+    content: "\2716";
+    color: white;
+    font-size: 1.2em;
+    line-height: 1em;
+}
+
+.answers-list > li.right-answer span:before {
+    color: #FFFFFF;
+    background-color: #1199FF; 
+    font-family: FontAwesome;
+    content: "\2714";
+    font-size: 1.2em;
+    line-height: 1em;
+}
+
+.solution-row {
+  background-color: #FFFFD0;
+  margin-top: 1em;
+  word-wrap: break-word;
+}

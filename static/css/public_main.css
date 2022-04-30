@@ -1,0 +1,344 @@
+#top-section {
+  background: linear-gradient(#EEffff, #BBFFFF);
+  margin-top: -2rem;
+}
+#top-section h2 {
+  color:#8D230F;
+  margin-top: -8rem; 
+  font-size: 4rem;
+  font-family: Verdana, Geneva, sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif; 
+  font-weight: 700; 
+}
+#about {
+  background: linear-gradient(#BBFFFF, #EEFFFF)
+}
+#about .container {
+  padding-top: 3rem;
+  padding-top: 8rem;
+}
+#trial-tests {
+    background: linear-gradient(#EEFFFF, #FFFFFF)
+
+}
+#register .container {
+  width: 90%;
+  max-width: 900px;
+}
+.features-icons {
+  padding-top: 7rem;
+  padding-bottom: 7rem; 
+}
+
+#quote-carousel {
+    padding: 0 10px 30px 10px;
+    margin-top: 60px;
+}
+#quote-carousel .carousel-control {
+    background: none;
+    color: #CACACA;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+}
+#quote-carousel .carousel-indicators {
+    position: relative;
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-top: 20px;
+    margin-right: -19px;
+}
+#quote-carousel .carousel-indicators li {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    opacity: 0.4;
+    overflow: hidden;
+    transition: all .4s ease-in;
+    vertical-align: middle;
+}
+#quote-carousel .carousel-indicators .active {
+    width: 128px;
+    height: 128px;
+    opacity: 1;
+    transition: all .2s;
+}
+.item blockquote {
+    border-left: none;
+    margin: 0;
+}
+
+.timeline {
+  position: relative;
+  padding: 0;
+  list-style: none; }
+  .timeline:before {
+    position: absolute;
+    top: 5rem;
+    bottom: 10rem;
+    left: 40px;
+    width: 1px;
+    margin-left: -1.5px;
+    content: '';
+    background-color: #F17022; }
+  .timeline > li {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 50px; }
+    .timeline > li:after, .timeline > li:before {
+      display: table;
+      content: ' '; }
+    .timeline > li:after {
+      clear: both; }
+    .timeline > li .timeline-panel {
+      position: relative;
+      float: right;
+      width: 100%;
+      padding: 0 20px 0 100px;
+      text-align: left; }
+      .timeline > li .timeline-panel:before {
+        right: auto;
+        left: -15px;
+        border-right-width: 15px;
+        border-left-width: 0; }
+      .timeline > li .timeline-panel:after {
+        right: auto;
+        left: -14px;
+        border-right-width: 14px;
+        border-left-width: 0; }
+    .timeline > li .timeline-image {
+      position: absolute;
+      z-index: 100;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      margin-left: 0;
+      text-align: center;
+      border-radius: 100%;
+      background: transparent; 
+        }
+      .timeline > li .timeline-image h4 {
+        font-size: 10px;
+        line-height: 14px;
+        margin-top: 12px; }
+    .timeline > li.timeline-inverted > .timeline-panel {
+      float: right;
+      padding: 0 20px 0 100px;
+      text-align: left; }
+      .timeline > li.timeline-inverted > .timeline-panel:before {
+        right: auto;
+        left: -15px;
+        border-right-width: 15px;
+        border-left-width: 0; }
+      .timeline > li.timeline-inverted > .timeline-panel:after {
+        right: auto;
+        left: -14px;
+        border-right-width: 14px;
+        border-left-width: 0; }
+    .timeline > li:last-child {
+      margin-bottom: 0; }
+  .timeline .timeline-heading h4 {
+    margin-top: 0;
+    color: #8D230F; 
+    font-size: 3rem;
+    font-family: 'Bitter';
+    letter-spacing: -1px; 
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 #000, 
+    margin: 10px 0 24px;
+  }
+  .timeline .timeline-body > ul,
+  .timeline .timeline-body > p {
+    font-size: 2rem;
+    margin-bottom: 0; }
+
+@media (min-width: 768px) {
+  .timeline:before {
+    left: 50%; }
+  .timeline > li {
+    min-height: 100px;
+    margin-bottom: 100px; }
+    .timeline > li .timeline-panel {
+      float: left;
+      width: 41%;
+      padding: 0 20px 20px 30px;
+      text-align: right; }
+    .timeline > li .timeline-image {
+      left: 50%;
+      width: 100px;
+      height: 100px;
+      margin-left: -50px; }
+      .timeline > li .timeline-image h4 {
+        font-size: 13px;
+        line-height: 18px;
+        margin-top: 16px; }
+    .timeline > li.timeline-inverted > .timeline-panel {
+      float: right;
+      padding: 0 30px 20px 20px;
+      text-align: left; } }
+
+@media (min-width: 992px) {
+  .timeline > li {
+    min-height: 150px; }
+    .timeline > li .timeline-panel {
+      padding: 0 20px 20px; }
+    .timeline > li .timeline-image {
+      width: 150px;
+      height: 150px;
+      margin-left: -75px; }
+      .timeline > li .timeline-image h4 {
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 30px; }
+    .timeline > li.timeline-inverted > .timeline-panel {
+      padding: 0 20px 20px; } }
+
+@media (min-width: 1200px) {
+  .timeline > li {
+    min-height: 170px; }
+    .timeline > li .timeline-panel {
+      padding: 0 20px 20px 100px; }
+    .timeline > li .timeline-image {
+      width: 170px;
+      height: 170px;
+      margin-left: -85px; }
+      .timeline > li .timeline-image h4 {
+        margin-top: 40px; }
+    .timeline > li.timeline-inverted > .timeline-panel {
+      padding: 0 100px 20px 20px; } }
+
+
+
+/*--------------------------------------------------
+    [Gutter]
+----------------------------------------------------*/
+
+.content-sm {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.content-md {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.margin-b-40 {
+    margin-bottom: 40px !important;
+}
+
+@media (max-width: 992px) {
+  .md-margin-b-30 {
+    margin-bottom: 30px !important;
+  }
+}
+
+
+/*--------------------------------------------------
+    [Radius]
+----------------------------------------------------*/
+
+.radius-3 {
+  border-radius: 10px !important;
+}
+
+.radius-10 {
+  border-radius: 10px !important;
+}
+
+/*--------------------------------------------------
+    [Button]
+----------------------------------------------------*/
+
+.btn-dark-brd {
+  position: relative;
+  display: inline-block;
+  line-height:1.6;
+  color:black;
+  text-align: center;
+  background: transparent;
+  background-image: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #06425C;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn-dark-brd:focus, .btn-dark-brd:active:focus, .btn-dark-brd.active:focus, .btn-dark-brd.focus, .btn-dark-brd:active.focus, .btn-dark-brd.active.focus {
+  outline: none;
+}
+
+.btn-dark-brd:hover {
+  transition-duration: 200ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+}
+
+.btn-dark-brd:hover, .btn-dark-brd:focus, .btn-dark-brd.focus {
+  color: #fff;
+  background: #34343c;
+  border-color: #34343c;
+  text-decoration: none;
+}
+
+.btn-dark-brd:after, .btn-dark-brd:before {
+  background: transparent;
+}
+
+.btn-dark-brd:active, .btn-dark-brd.active {
+  background-image: none;
+  outline: 0;
+}
+
+.btn-dark-brd.disabled, .btn-dark-brd[disabled],
+fieldset[disabled] .btn-dark-brd {
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: .65;
+  pointer-events: none;
+}
+
+.btn-base-sm {
+  font-size: 1.5em;
+  padding: 8px 24px;
+}
+
+
+/*--------------------------------------------------
+    [Pricing List v4]
+----------------------------------------------------*/
+.pricing-list-v4 {
+  text-align: center;
+  background: #fff;
+  box-shadow: 15px 15px 15px 0 #8DB2A9;
+}
+
+.pricing-list-v4 .pricing-list-v4-header {
+  border-bottom: 1px solid #e4e8f3;
+  padding: 0.7rem 0.5rem 0.7rem;
+  background-color: #8ED2C9;
+}
+
+.pricing-list-v4 .pricing-list-v4-header .pricing-list-v4-title {
+  font-size: 32px;
+  margin-bottom: 5px;
+  color: black;
+}
+
+
+.pricing-list-v4 .pricing-list-v4-content {
+  padding: 2em 1.5em;
+  background-color: #8ED2C9;
+}

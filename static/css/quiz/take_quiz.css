@@ -1,0 +1,13 @@
+.answers-row input[type="radio"]:checked + label {
+    font-weight: bold;
+}
+
+.answers-row input[type="radio"]:checked + label:before {
+    background-color: black;
+    color: #999999;
+}
+
+.answers-list li:hover{
+  background: #FFFFFF;
+  font-weight: bold;
+}

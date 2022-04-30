@@ -1,0 +1,55 @@
+{% extends '__base.html' %}
+{% load i18n %}
+
+{% block page_header %} {{subject}} {% endblock %}
+
+{% block content %}
+<div class="container">
+<div class="panel panel-default">
+ 	<div class="panel-body">
+        {% url "purchase_stars" as purchase_stars_url %}
+	    {% blocktrans %}
+            In order to open locked (<i class="glyphicon glyphicon-lock" style="color:darkblue;"></i>) tests, you must purchase stars (<i class="glyphicon glyphicon-star"></i>) by sending money to +7-(775)-368-68-70 via QIWI terminal. Make sure to enter your username at the terminal. For more info, <a href="{{purchase_stars_url}}">click here.</a> Price of each test is indicated along with the test, 1 <span> <i class="glyphicon glyphicon-star"></i> </span> = 1 KZT.
+        {% endblocktrans %}
+	 </div>
+</div>
+
+<table class="table table-striped table-hover">
+    <thead>
+    <tr>
+        <th>{% trans "Quiz" %}</th>
+        <th>{% trans "Amount of Problems" %}</th>
+        <th>{% trans "Price" %}</th>
+        <th>{% trans "Status" %}</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for quiz in quizzes %}
+    <tr>
+        <td>
+        &nbsp;
+            {% if quiz.pk in permitted_quiz_ids or quiz.price == 0 %}
+                <i class="glyphicon glyphicon-folder-open" style="color:#C85A17;"></i>
+                &nbsp;
+                <a href="{% url 'quiz:take_quiz' quiz.id %}"> {{ quiz.name }} </a>
+            {% else %}
+                <i class="glyphicon glyphicon-lock" style="color:darkblue;"></i>
+                &nbsp;
+                <a href="{% url 'quiz:checkout_quiz' quiz.id %}"> {{ quiz.name }} </a>
+            {% endif %}
+        </td>
+        <td>{{quiz.question_count}} </td>
+        <td>{{quiz.price}} <span> <i class="glyphicon glyphicon-star"></i> </span> </td>
+        <td>
+          {% if quiz.pk in passed_quiz_ids %}
+            {%trans "passed"%} <a href="{% url 'quiz:quiz_solution' quiz.id %}">({% trans "solution" %})</a>
+          {% else %}
+            {%trans "not passed"%}
+          {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}

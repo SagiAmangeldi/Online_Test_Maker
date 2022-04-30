@@ -1,0 +1,25 @@
+{% extends '__base.html' %}
+{% load i18n %}
+{% block content %}
+<div class="container">
+    {% if quiz.price > balance %}
+        {% url "purchase_stars" as purchase_stars_url %}
+        {% blocktrans %}
+            You don't have sufficient balance to take this quiz. To purchase stars, click here <a href="{{purchase_stars_url}}"> for instructions. </a>
+        {% endblocktrans %}
+    {% else %}
+        {% if quiz.price != 0 %}
+        <h3>
+            {% blocktrans with price=quiz.price%} Note that when you click the link below, {{price}} pts will be redacted from your account. {% endblocktrans %}
+        </h3>
+        {% else %}
+        <h3>
+            {% blocktrans%} This quiz is free of charge. {% endblocktrans %}
+        </h3>
+        {% endif %}
+        <h3>
+            {% trans "Link for taking the quiz:"%} <a href="{% url 'quiz:take_quiz' quiz.id %}"> {{quiz.name}} </a>
+        </h3>
+    {% endif %}
+</div>
+{% endblock %}

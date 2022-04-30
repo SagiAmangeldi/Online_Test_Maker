@@ -1,0 +1,660 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-26 00:31+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: templates/__base.html:58 templates/terms.html:4 templates/terms.html:6
+msgid "User agreement"
+msgstr "Пользовательское соглашение"
+
+#: templates/_navbar_top.html:23
+msgid "Quizzes"
+msgstr "Тесты"
+
+#: templates/_navbar_top.html:26 templates/loggedin_main.html:70
+msgid "Blog"
+msgstr "Блог"
+
+#: templates/_navbar_top.html:29
+msgid "Star Payments"
+msgstr "Покупка стар"
+
+#: templates/_navbar_top.html:32 templates/contact/contact.html:4
+#: templates/contact/thanks.html:5
+msgid "Contact Us"
+msgstr "Свяжитесь с нами"
+
+#: templates/_navbar_top.html:48 templates/accounts/logout.html:3
+msgid "Logout"
+msgstr "Выйти"
+
+#: templates/_navbar_top.html:55 templates/accounts/login.html:5
+#: templates/accounts/login.html:36
+msgid "Login"
+msgstr "Логин"
+
+#: templates/accounts/login.html:25 templates/public_main.html:187
+#: templates/quiz/quiz_results.html:82
+msgid "Username"
+msgstr "Имя пользователя (username)"
+
+#: templates/accounts/login.html:30 templates/public_main.html:193
+#: templates/quiz/quiz_results.html:88
+msgid "Password"
+msgstr "Пароль"
+
+#: templates/accounts/login.html:36
+msgid "Forgot password?"
+msgstr "Забыли пароль"
+
+#: templates/accounts/logout.html:6
+msgid "Logout successful"
+msgstr "Выход завершен"
+
+#: templates/accounts/password_change_form.html:5
+#: templates/accounts/password_reset.html:5
+#: templates/accounts/password_reset_complete.html:5
+#: templates/accounts/password_reset_done.html:5
+msgid "Reset Password"
+msgstr "Сброс пароля"
+
+#: templates/accounts/password_change_form.html:14
+msgid "Please correct the error below."
+msgstr "Пожалуйста, исправьте ошибку ниже."
+
+#: templates/accounts/password_change_form.html:14
+#: templates/accounts/transfer_stars.html:19 templates/contact/contact.html:13
+msgid "Please correct the errors below."
+msgstr "Пожалуйста, исправьте ошибки ниже."
+
+#: templates/accounts/password_change_form.html:44
+msgid "Change my password"
+msgstr "Поменять пароль"
+
+#: templates/accounts/password_reset.html:8
+msgid ""
+"Forgot your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr "Забыли пароль? Введите свой адрес электронной почты ниже, и мы отправим вам инструкции по настройке нового."
+
+#: templates/accounts/password_reset.html:14
+msgid "Email address:"
+msgstr "Электронная почта (email)"
+
+#: templates/accounts/password_reset.html:15
+msgid "Reset my password"
+msgstr "Сбросить пароль"
+
+#: templates/accounts/password_reset_complete.html:9
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr "Ваш пароль установлен. Теперь вы можете войти в систему."
+
+#: templates/accounts/password_reset_done.html:9
+msgid ""
+"We've emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly."
+msgstr ""
+"Мы отправили вам по электронной почте инструкции по настройке пароля, если "
+"учетная запись существует с введенным вами электронным письмом, вы должны "
+"получить их в ближайшее время."
+
+#: templates/accounts/password_reset_done.html:11
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+"Если вы не получили электронное письмо, убедитесь, что вы ввели адрес "
+"которую вы зарегистрировали, и проверьте папку со спамом."
+
+#: templates/accounts/purchase_stars_howto.html:4
+msgid "In order to purchase stars, please follow the below instructions."
+msgstr "Чтобы приобрести стар, следуйте приведенным ниже инструкциям."
+
+#: templates/accounts/purchase_stars_howto.html:7
+#, python-format
+msgid ""
+"\n"
+"          <h1>Star Purchase Instructions</h1>\n"
+"          <br>\n"
+"           <table border=0 class=\"rounded-list\">\n"
+"              <tr>\n"
+"                  <td>\n"
+"                  <ol>\n"
+"                  <li><p>Start with \"Qiwi Wallet\" in the main screen and "
+"selec \"fill Qiwi Wallet\" option.</p></li>\n"
+"                  <li><p>Enter the Qiwi Walled number as <strong>+7-"
+"(775)-368-68-70</strong>.</p></li>\n"
+"                  <li><p>Enter your dayindal.com username <strong>"
+"%(request.user.username)s</strong> in the comments section.</p></li>\n"
+"                  <li><p>Insert money and keep the receipt.</p></li>\n"
+"                  <li><p>If the transferred amount does not appear in your "
+"profile within 24 hours, send an email to support@dayindal.com attaching "
+"your receipt.</p></li>\n"
+"                  </ol>\n"
+"                  </td>\n"
+"              </tr>\n"
+"          </table>\n"
+"        "
+msgstr ""
+"\n"
+"          <h1>Как купить стар?</h1>\n"
+"          <br>\n"
+"           <table border=0 class=\"rounded-list\">\n"
+"              <tr>\n"
+"                  <td>\n"
+"                  <ol>\n"
+"                  <li><p>Нажмите на «Qiwi Кошелек» на главном экране и выберите опцию «заполнить Qiwi Кошелек».</p></li>\n"
+"                  <li><p>Введите <strong>+7-(775)-368-68-70</strong> на номер «Qiwi Кошелек».</p></li>\n"
+"                  <li><p>Введите имя пользователя в dayindal.com %(request.user.username)s в разделе комментариев.</p></li>\n"
+"                  <li><p>Вставьте деньги и сохраните квитанцию.</p></li>\n"
+"                  <li><p>Если переведенная сумма не отображается в вашем профиле в течение 24 часов, отправьте электронное письмо на адрес support@dayindal.com с вашей квитанцией.</p></li>\n"
+"                  </ol>\n"
+"                  </td>\n"
+"              </tr>\n"
+"          </table>\n"
+"        "
+
+#: templates/accounts/quiz_payments.html:7
+msgid "Click here for instructions to purchase new stars"
+msgstr "Нажмите здесь для получения инструкций по покупке новых стар"
+
+#: templates/accounts/quiz_payments.html:10
+msgid "Your Quiz Payments"
+msgstr "Ваши платежи"
+
+#: templates/accounts/quiz_payments.html:14 templates/loggedin_main.html:39
+#: templates/quiz/progress_history.html:10
+msgid "Quiz Name"
+msgstr "Название теста"
+
+#: templates/accounts/quiz_payments.html:15
+#: templates/accounts/star_purchases.html:12
+msgid "Amount"
+msgstr "Сумма"
+
+#: templates/accounts/quiz_payments.html:16
+msgid "Payment Date"
+msgstr "Дата оплаты"
+
+#: templates/accounts/quiz_payments.html:30
+msgid "You haven't made any quiz payments."
+msgstr "Вы не делали никаких платежей."
+
+#: templates/accounts/register_activation_complete.html:11
+#: templates/registration/activate.html:3
+msgid "Account activation"
+msgstr "Активация аккаунта"
+
+#: templates/accounts/register_activation_complete.html:14
+#: templates/registration/activate.html:6
+msgid "Account has been activated, you can login now."
+msgstr "Аккаунт активирован, вы можете войти в систему."
+
+#: templates/accounts/register_complete.html:10
+msgid "Actvate registration"
+msgstr "Активировать регистрацию"
+
+#: templates/accounts/register_complete.html:14
+msgid ""
+"Please activate your registration by clicking on the link sent to your e-"
+"mail."
+msgstr ""
+"Пожалуйста, активируйте свою регистрацию, нажав на ссылку, отправленную на "
+"ваш адрес электронной почты."
+
+#: templates/accounts/register_init.html:3 templates/quiz/quiz_results.html:79
+msgid "Registration"
+msgstr "Регистрация"
+
+#: templates/accounts/register_init.html:19 templates/public_main.html:182
+#: templates/public_main.html:200 templates/quiz/quiz_results.html:95
+msgid "Register"
+msgstr "Зарегистрироваться"
+
+#: templates/accounts/star_purchases.html:4
+msgid "Your Star Purchases"
+msgstr "Ваши покупки Стар"
+
+#: templates/accounts/star_purchases.html:13
+msgid "Comment"
+msgstr "Комментарий"
+
+#: templates/accounts/star_purchases.html:14
+msgid "Purchase Date"
+msgstr "Дата покупки"
+
+#: templates/accounts/star_purchases.html:29
+#, python-format
+msgid ""
+"\n"
+"            You haven't made any star purchases. To purchase stars, click <a "
+"href=\"%(purchase_stars_url)s\"> here. </a>\n"
+"        "
+msgstr ""
+"\n"
+"Вы не совершали никаких покупок на звезду. Чтобы купить стар (звезды), "
+"нажмите <a href=\"%(purchase_stars_url)s\"> здесь. </a>\n"
+"        "
+
+#: templates/accounts/transfer_stars.html:13
+msgid "Transfer Points"
+msgstr "Перевести стар."
+
+#: templates/accounts/transfer_stars.html:34
+msgid "Username of the person receiving:"
+msgstr "Имя (username) получающего пользователя:"
+
+#: templates/accounts/transfer_stars.html:45
+msgid "Amount of points to send:"
+msgstr "Количество / Сумма"
+
+#: templates/accounts/transfer_stars.html:57 templates/contact/contact.html:37
+msgid "Send"
+msgstr "Отправить / Перевести"
+
+#: templates/accounts/transfer_stars_done.html:5
+msgid "Points Transfer"
+msgstr "Перевод стар"
+
+#: templates/accounts/transfer_stars_done.html:9
+msgid "Transfer has been completed"
+msgstr "Перевод завершен"
+
+#: templates/accounts/view_user.html:3
+msgid "Profile Info"
+msgstr "Информация о профиле"
+
+#: templates/accounts/view_user.html:7
+#, python-format
+msgid ""
+"\n"
+"            <li> Username: %(username)s </li>\n"
+"            <li> E-mail: %(email)s </li>\n"
+"            <li> Balance: %(balance)s <span> <i class=\"glyphicon glyphicon-"
+"star\"></i> </span> </li>\n"
+"            <li> <u> <a href=\"/accounts/password_reset\"> Reset Password </"
+"a> </u> </li>\n"
+"        "
+msgstr ""
+
+#: templates/admin/quiz_results.html:12 templates/quiz/quiz_results.html:12
+#, python-format
+msgid ""
+"\n"
+"        You scored %(score)s out of %(question_count)s on %(quiz_name)s\n"
+"    "
+msgstr ""
+"\n"
+"        Вы набрали %(score)s из %(question_count)s по тесту %(quiz_name)s\n"
+"    "
+
+#: templates/admin/quiz_results.html:62 templates/quiz/quiz_results.html:62
+#: templates/quiz/quiz_solution.html:46
+msgid "Solution"
+msgstr "Решение"
+
+#: templates/contact/contact.html:22 templates/contact/contact.html:25
+msgid "Message subject"
+msgstr "Тема сообщения"
+
+#: templates/contact/contact.html:29
+msgid "Message"
+msgstr "Cообщениe"
+
+#: templates/contact/thanks.html:9
+msgid "Your message has been sent. Thank you for contacting us!"
+msgstr "Ваше сообщение было отправлено. Благодарим Вас за обращение к нам!"
+
+#: templates/loggedin_main.html:10 templates/public_main.html:15
+msgid "Online preparation portal for BIL and NISH tests"
+msgstr "Портал для подготовки к экзаменам БИЛ (КТЛ) и НИШ"
+
+#: templates/loggedin_main.html:35
+msgid "Past Quizzes"
+msgstr "Мой пройденные тесты"
+
+#: templates/loggedin_main.html:40 templates/quiz/progress_history.html:11
+msgid "Attempt Date"
+msgstr "Дата сдачи"
+
+#: templates/loggedin_main.html:41 templates/quiz/progress_history.html:12
+msgid "Score"
+msgstr "Очко"
+
+#: templates/loggedin_main.html:62 templates/quiz/progress_history.html:30
+msgid "You have not taken any quizzes."
+msgstr "Вы не сдавали никаких тестов."
+
+#: templates/loggedin_main.html:64
+msgid "You can start from trial quizzes: "
+msgstr "Вы можете начать с пробных тестов: "
+
+#: templates/loggedin_main.html:64 templates/public_main.html:87
+msgid "Math"
+msgstr "Математика"
+
+#: templates/loggedin_main.html:64 templates/public_main.html:101
+msgid "Logic"
+msgstr "Логика"
+
+#: templates/loggedin_main.html:64 templates/public_main.html:115
+msgid "English"
+msgstr "Английский"
+
+#: templates/public_main.html:23
+msgid "Prepare online for BIL and NISH tests"
+msgstr "Портал для подготовки к экзаменам БИЛ (КТЛ) и НИШ"
+
+#: templates/public_main.html:40
+msgid "More than 70 tests"
+msgstr "Более 70 тестов"
+
+#: templates/public_main.html:43
+msgid ""
+"Access rich set of more than 70 Math and Logic tests constructed specially "
+"in the style of NISH (Nazarbayev Intellectual Schools) and BIL (Bilim "
+"Innovation Schools, previously known as KTL) tests."
+msgstr ""
+"Богатый набор более 70 математических и логических тестов, специально "
+"разработанных в стиле НИШ (Назарбаев Интеллектуальные Школы) и БИЛ (Білім "
+"Инновация лицейі, ранее известные как КТЛ)."
+
+#: templates/public_main.html:53
+msgid "Problem solutions"
+msgstr "Решение задач"
+
+#: templates/public_main.html:56
+msgid ""
+"For truly difficult problems, it is not sufficient to merely see the correct "
+"answer. Only by fully understanding the solution can one truly comprehend "
+"them and that is why we have included solutions to certain flavor of "
+"difficult and tricky problems."
+msgstr ""
+"Для сложных задач недостаточно просто увидеть правильный ответ."
+"Только, полностью понимая решение, можно по-настоящему их понять, и "
+"поэтому мы включили решения определенного типа сложных задач."
+
+#: templates/public_main.html:66
+msgid "Review and learn"
+msgstr "Обзор и изучение"
+
+#: templates/public_main.html:69
+msgid ""
+"Reaching proficiency requires not only repeated practice but a proper "
+"strategy. Our platform lets your review your tests anytime from anywhere. By "
+"analyzing your history you can identify your weak areas and improve upon "
+"them."
+msgstr ""
+"Достижение мастерства требует не только повторной практики, но и правильной "
+"стратегии. Наша платформа позволяет просматривать ваши тесты в любое время "
+"из любого места. Анализируя свою историю, вы можете определить свои слабые "
+"места и улучшить их."
+
+#: templates/public_main.html:91 templates/public_main.html:105
+#: templates/public_main.html:119
+msgid "Trial quiz"
+msgstr "Пробный тест"
+
+#: templates/public_main.html:139
+msgid ""
+"I am currently a student of BIL (KTL). I want to say that I used dayindal."
+"com extensively to learn about Math and Logic. I would email the site for "
+"problem sets that I did not understand and they would write me back the "
+"correct way. It helped me a lot. That is why I would like to say big thank "
+"you to the site. I wish them to grow and prosper!"
+msgstr ""
+"В настоящее время я студент БИЛ (КТЛ). Я широко использовал dayindal.com, "
+"чтобы узнать о математике и логике. Я отправлял по электронной почте набор "
+"задач, которых я не понимал, и они отправляли мне письмо с ответом. Это мне "
+"очень помогло. Поэтому я хотел бы сказать большое спасибо сайту. Я желаю им "
+"расти и процветать!"
+
+#: templates/public_main.html:140
+msgid "Makhambet Gennadiyev"
+msgstr "Махамбет Ганнадиев"
+
+#: templates/public_main.html:148
+msgid ""
+"Good day, this is me Lunara. Thank you for this website. Thanks to this I am "
+"even studying well at school. I want you especially thank you for your "
+"recent promotional activity relating to stars. I really like this site. "
+"Thank you!"
+msgstr ""
+"Здравствуйте! Меня зовут Лунара. Спасибо за сайт. Благодаря этому сайту, у "
+"меня заметно прибавились успехи в учебе. Большое спасибо за Ваши акции. Мне "
+"очень понравился этот сайт. Благодарю Вас!"
+
+#: templates/public_main.html:149
+msgid "Lunara (dayindal.com user from 2016)"
+msgstr "Лунара (пользователь сайта с 2016г.)"
+
+#: templates/public_main.html:157
+msgid ""
+"I once stumbled upon this website and immediately registered. I had 9 "
+"students applying to NISH schools that year and I told them about the site "
+"because the site has a lot of nice problem sets. My students even won some "
+"of the group competitions organized by the site. Eventually 3 of my students "
+"got accepted to NISH. Even this year most of my students have registered and "
+"are active users of the site. I hope the site will grow and wish all the "
+"best to them."
+msgstr ""
+"Наткнувшись на этот сайт, я сразу же зарегистрировалась. В прошлом году 9 "
+"моих учеников подавали заявки в школы НИШ, и я рассказал им об этом сайте, "
+"так как на сайте содержится большой набор интересных задач. Мои ученики даже "
+"выигровали некоторые конкурсы, организованные сайтом. В итоге, 3 моих "
+"ученика поступили в НИШ. И в этом году большинство моих учеников "
+"зарегистрировались и являются активными пользователями сайта. Желаю сайту "
+"всего наилучшего!"
+
+#: templates/public_main.html:158
+msgid "Aitanova Parasat (Informatics teacher, N35 school, Kyzylorda region)"
+msgstr ""
+"Айтанова Парасат (учитель информатики, школа N35, Кызылординская область)"
+
+#: templates/public_main.html:190 templates/quiz/quiz_results.html:85
+msgid "Email Address"
+msgstr "Адрес эл. почты (email)"
+
+#: templates/public_main.html:196 templates/quiz/quiz_results.html:91
+msgid "Re-enter password"
+msgstr "Повторно введите пароль"
+
+#: templates/quiz/checkout_quiz.html:7
+msgid ""
+"\n"
+"            You don't have sufficient balance to take this quiz. To purchase "
+"stars, click here <a href=\"%(purchase_stars_url)s\"> for instructions. </a>\n"
+"        "
+msgstr ""
+"\n"
+"            У вас недостаточно средств для сдачи этого теста. Чтобы купить стар "
+"(звезды), нажмите <a href=\"%(purchase_stars_url)s\"> здесь.</a>\n"
+"        "
+
+#: templates/quiz/checkout_quiz.html:13
+#, python-format
+msgid ""
+" Note that when you click the link below, %(price)s pts will be redacted "
+"from your account. "
+msgstr ""
+"Обратите внимание, что когда вы нажмете ссылку ниже, сумма %(price)s будет "
+"изъята из вашего баланса."
+
+#: templates/quiz/checkout_quiz.html:17
+msgid " This quiz is free of charge. "
+msgstr "Этот тест является бесплатным."
+
+#: templates/quiz/checkout_quiz.html:21
+msgid "Link for taking the quiz:"
+msgstr "Ссылка для сдачи теста:"
+
+#: templates/quiz/list_subj_quizzes.html:11
+#, python-format
+msgid ""
+"\n"
+"            In order to open locked (<i class=\"glyphicon glyphicon-lock\" "
+"style=\"color:darkblue;\"></i>) tests, you must purchase stars (<i class="
+"\"glyphicon glyphicon-star\"></i>) by sending money to +7-(775)-368-68-70 "
+"via QIWI terminal. Make sure to enter your username at the terminal. For "
+"more info, <a href=\"%(purchase_stars_url)s\">click here.</a> Price of each "
+"test is indicated along with the test, 1 <span> <i class=\"glyphicon "
+"glyphicon-star\"></i> </span> = 1 KZT.\n"
+"        "
+msgstr ""
+"\n"
+"            Для того чтобы открыть скрытые (<i class=\"glyphicon glyphicon-lock\" "
+"style=\"color:darkblue;\"></i>) тесты, вам необходимо купить стар (<i class="
+"\"glyphicon glyphicon-star\"></i>) отправив деньги на номер +7-(775)-368-68-70 "
+"по терминалу QIWI. Не забудьте ввести имя пользовтеля при оправке."
+" Нажмите <a href=\"%(purchase_stars_url)s\">здесь</a> для подробной инструкции. Цена каждого теста "
+"указано рядом с тестом, 1 <span> <i class=\"glyphicon "
+"glyphicon-star\"></i> </span> = 1 тенге.\n"
+"        "
+
+#: templates/quiz/list_subj_quizzes.html:20
+msgid "Quiz"
+msgstr "Тест"
+
+#: templates/quiz/list_subj_quizzes.html:21
+msgid "Amount of Problems"
+msgstr "Количество задач"
+
+#: templates/quiz/list_subj_quizzes.html:22
+msgid "Price"
+msgstr "Цена"
+
+#: templates/quiz/list_subj_quizzes.html:23
+msgid "Status"
+msgstr "Статус"
+
+#: templates/quiz/list_subj_quizzes.html:45
+msgid "passed"
+msgstr "выполнен"
+
+#: templates/quiz/list_subj_quizzes.html:45
+msgid "solution"
+msgstr "решение"
+
+#: templates/quiz/list_subj_quizzes.html:47
+msgid "not passed"
+msgstr "не выполнен"
+
+#: templates/quiz/progress_history.html:3
+msgid "Progress History"
+msgstr "История"
+
+#: templates/quiz/quiz_solution.html:12
+msgid "solutions"
+msgstr "решения"
+
+#: templates/quiz/quiz_solution.html:19
+#, fuzzy
+#| msgid "Registration"
+msgid "Question"
+msgstr "Регистрация"
+
+#: templates/quiz/quiz_solution.html:35
+msgid "Correct choice"
+msgstr "Правильный вариант"
+
+#: templates/quiz/quiz_solution.html:41
+msgid "Correct choice figure"
+msgstr "Рисунок правильного варианта"
+
+#: templates/quiz/quiz_solution.html:53
+msgid "Solution figure"
+msgstr "Рисунок решения"
+
+#: templates/quiz/take_free_quiz.html:76 templates/quiz/take_quiz.html:82
+msgid "Submit"
+msgstr "Отправить"
+
+#: templates/quiz/take_quiz.html:28
+msgid "pts has been deducted from your balance"
+msgstr "сняты с вашего счета"
+
+#: templates/terms.html:10
+msgid ""
+"\n"
+"    <h4>\n"
+"        Егер сіз www.dayindal.com немесе dayindal.com интернет сайтына "
+"тіркелуді қаласаңыз онда төменде жазылған шарттардың барлығымен толықтай "
+"келісуге міндеттісіз.\n"
+"    </h4>\n"
+"    <h4>\n"
+"        Шартта қолданылатын терминдер:\n"
+"    </h4>\n"
+"    <ul>\n"
+"        <li>Сайт - www.dayindal.com немесе dayindal.com адресінде орналасқан "
+"интернет ресурс. </li>\n"
+"        <li>Стар – сайтта берілген материалдарды тек сайт үстінде қолданып, "
+"есептеп немесе шешіп көруге мүмкіндік беретін шартты белгі.</li>\n"
+"        <li>Тест – сайтта берілген, құны стармен есептелетін сұрақтар және/"
+"немесе есептер жиынтығы. </li>\n"
+"        <li>Юзер – осы келісіммен келіскен және сайтта өз қолданушы атымен "
+"және құпия сөзімен тіркелген қолданушы. </li>\n"
+"        <li>Баланс – тек сайтта көрсетілген жолмен алынған стардың юзердегі "
+"мөлшері.</li>\n"
+"    </ul>\n"
+"    <h4>Шарт.</h4>\n"
+"    <ul>\n"
+"        <li>Юзер сайтта берілген тесттерді көруге, шешімін белгілеуге құқық "
+"алуы үшін өз балансындағы старды қолдануға міндетті.</li>\n"
+"        <li>Юзер сайтты тек тест көру және шешімін белгілеу мақсатында "
+"қолданады.</li>\n"
+"        <li>Юзер немесе кез-келген азамат немесе ұйым сайт иесіне немесе "
+"сайт администрациясына еш уақытта талап, тілек, шағым қоя алмайды. </li>\n"
+"        <li>Стар алу тек сайтта көрсетілген жолмен алынады және тек сайтта "
+"көрсетілген бағытта жұмсалады.</li>\n"
+"        <li>Алынған стар мөлшері юзерге старды тек сайтта қолдануға "
+"мүмкіндік береді.</li>\n"
+"        <li>Стар балансы немесе кез-келген стар мөлшері юзерге немесе кез-"
+"келген азаматқа немесе ұйымға ақшалай немесе басқа да\n"
+"            материалдық жолмен еш уақытта қайтарылмайды.</li>\n"
+"        <li>Кез-келген техникалық себептерге байланысты болған келіспеушілік "
+"үшін сайт иесі немесе сайт администрациясы жауап бермейді.</li>\n"
+"        <li>Юзер тарапынан немесе басқа да себептермен болған қателер үшін "
+"сайт иесі немесе сайт администрациясы жауап бермейді.</li>\n"
+"        <li>Осы қолданушы келісімі сайтта жарияланады және кез-келген "
+"өзгеріс болған жағдайда сайтта өзгерген мәтіні жарияланады.\n"
+"            Өзгерген келісіммен келіспеген қолданушы сайтты қолданудан және "
+"балансын қолданудан ерікті түрде бас тартқан болып есептеледі. </li>\n"
+"        <li>Юзер балансы 30000 стардан аспауы керек.</li>\n"
+"        <li>Балансында стар мөлшері 0 болған және 3 ай бойы еш сайтты "
+"қолданбаған юзерді сайт иесі жоюға құқылы. </li>\n"
+"        <li>Сайттағы барлық мәтіндік және бейнелік материалдар мен олардың "
+"электронды нұсқалары сайт иесінің зияткерлік меншігі болып\n"
+"            табылады және тек сайтта ғана қолдануға рұқсат етіледі. Кез-"
+"келген жолмен олардың копиясының алынуы және/немесе оларды сайттан\n"
+"            тыс жерде қолданылуы заңмен қудаланады. Зияткерлік меншік "
+"құқығын бұзған тұлға Заңмен қудаланады және, авторлық және сабақтас\n"
+"            құқытарды бұзғаны үшін заң алдында жауапқа тартылады.\n"
+"        </li>\n"
+"    </ul>\n"
+"    "
+msgstr ""
+
+#~ msgid "Previous"
+#~ msgstr "Предыдущий"
+
+#~ msgid "Next"
+#~ msgstr "Следующий"
+
+#~ msgid "Problem sets for 5-6.th grade students."
+#~ msgstr "Задачи для школьников 5-х и 6-х классов."

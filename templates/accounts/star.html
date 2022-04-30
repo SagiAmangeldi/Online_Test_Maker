@@ -1,0 +1,29 @@
+{% extends '__base.html' %}
+{% load staticfiles i18n %}
+
+{% block content %}
+<div class="container">
+    <div class="row centered">
+        <div class="col-lg-3 index-col">
+            <a href="{% url 'purchase_stars' %}">
+                <img src="{% static 'img/purchase_stars.png'%}" alt="purchase stars">
+            </a>
+        </div>
+        <div class="col-lg-3 index-col">
+            <a href="{% url 'transfer_stars' %}">
+                <img src="{% static 'img/transfer_stars.png'%}" alt="transfer stars">
+            </a>
+        </div>
+        <div class="col-lg-3 index-col">
+            <a href="{% url 'star_purchases' %}">
+                <img src="{% static 'img/star_purchases.png'%}" alt="star purchases">
+            </a>
+        </div>
+        <div class="col-lg-3 index-col">
+            <a href="{% url 'quiz_payments' %}">
+                <img src="{% static 'img/quiz_payments.png' %}" alt="quiz payments">
+            </a>
+        </div>
+    </div>
+</div> <!--/ .container -->
+{% endblock %}

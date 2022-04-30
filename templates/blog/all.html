@@ -1,0 +1,32 @@
+{% extends '__base.html' %}
+{% load i18n staticfiles %}
+{% load django_markdown %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3 class="text-center"> {% trans 'Blog' %} </h3>
+            <ul class="list-group">
+                {% for post in posts %}
+                    <li class="list-group-item" style="font-size: 18px">
+                        <a href='{% url 'blog:post' post.slug %}'>{{ post.title }}</a>
+                        <span class="pull-right badge"> {{ post.creation_date|date:"d-m-Y" }} </span>
+                    </li>
+                {% endfor %}
+            </ul>
+            <div class="pagination">
+                <span class="step-links">
+                    {% if posts.has_previous %}
+                        <a href="?page={{ posts.previous_page_number }}">{%trans 'Previous Page' %}</a>
+                    {% endif %}
+
+                    {% if posts.has_next %}
+                        <a href="?page={{ posts.next_page_number }}">{%trans 'Next Page' %}</a>
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

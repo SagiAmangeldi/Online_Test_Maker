@@ -1,0 +1,6 @@
+{% load i18n %}
+{% trans "Activate your account at www.dayindal.com" %}:
+
+http://{{ site.domain }}{% url 'registration_activate' activation_key %}
+
+{% blocktrans with exp_days=expiration_days %}Link is valid for {{ exp_days }} days.{% endblocktrans %}

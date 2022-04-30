@@ -1,0 +1,11 @@
+{% extends "__base.html" %}
+
+{% load staticfiles i18n %}
+
+{% block title %} {% trans "Contact Us" %} {% endblock %}
+
+{% block content %}
+<div class="container" style="width: 85%">
+    <p>{% trans "Your message has been sent. Thank you for contacting us!" %}</p>
+</div>
+{% endblock %}

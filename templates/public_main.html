@@ -1,0 +1,205 @@
+{% extends '__base.html' %}
+{% load i18n l10n staticfiles %}
+
+{% block extra_js %}
+	<script>
+		ga('send', 'event', 'Users', 'view_homepage');
+	</script>
+{% endblock %}
+
+{% block extra_css %}
+	<link rel="stylesheet" href="{% static "css/public_main.css" %}"/>
+{% endblock %}
+
+{% block title %}
+	{% trans 'Online preparation portal for BIL and NISH tests' %}
+{% endblock %}
+
+{% block content %}
+<section id="top-section">
+	<div class="container text-center">
+		<div class="row">
+			<img src="{% static "img/landing-shelf.png"%}" id="landing-shelf" class="img-responsive center-block">
+			<h2>{% trans 'Prepare online for BIL and NISH tests' %}</h2>
+			<img src="{% static "img/landing-table.png"%}" alt="" class="img-responsive center-block">
+		</div>
+	</div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="timeline">
+          <li>
+            <div class="timeline-image">
+              <img class="img-rounded img-responsive" src="{% static "img/blackboard.png"%}" alt="">
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>{% trans 'More than 70 tests' %}</h4>
+              </div>
+              <div class="timeline-body">
+                <p>{% trans 'Access rich set of more than 70 Math and Logic tests constructed specially in the style of NISH (Nazarbayev Intellectual Schools) and BIL (Bilim Innovation Schools, previously known as KTL) tests.' %}</p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="timeline-image">
+              <img class="img-rounded img-responsive" src="{% static "img/open-book.png"%}" alt="">
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>{% trans 'Problem solutions' %}</h4>
+              </div>
+              <div class="timeline-body">
+                <p>{% trans 'For truly difficult problems, it is not sufficient to merely see the correct answer. Only by fully understanding the solution can one truly comprehend them and that is why we have included solutions to certain flavor of difficult and tricky problems.' %}</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-image">
+              <img class="img-rounded img-responsive" src="{% static "img/laptop.png"%}" alt="">
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>{% trans 'Review and learn' %}</h4>
+              </div>
+              <div class="timeline-body">
+                <p>{% trans 'Reaching proficiency requires not only repeated practice but a proper strategy. Our platform lets your review your tests anytime from anywhere. By analyzing your history you can identify your weak areas and improve upon them.' %}</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="trial-tests">
+    <div class="content-md container">
+        <div class="row">
+            <div class="col-md-4 md-margin-b-30">
+                <!-- Pricing List v4 -->
+                <div class="pricing-list-v4 radius-10">
+                    <div class="pricing-list-v4-header">
+                        <p class="pricing-list-v4-title">{%trans 'Math' %}</p>
+                    </div>
+                    <div class="pricing-list-v4-content">
+                        <div class="center-block">
+                            <a href="quiz/take_free_quiz/27/" class="btn-dark-brd btn-base-sm radius-3">{% trans 'Trial quiz' %}</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Pricing List v4 -->
+            </div>
+            <div class="col-md-4 md-margin-b-30">
+                <!-- Pricing List v4 -->
+                <div class="pricing-list-v4 radius-10">
+                    <div class="pricing-list-v4-header">
+                        <p class="pricing-list-v4-title">{%trans 'Logic' %}</p>
+                    </div>
+                    <div class="pricing-list-v4-content">
+                        <div class="center-block">
+							<a href="quiz/take_free_quiz/20/" class="btn-dark-brd btn-base-sm radius-3">{%trans 'Trial quiz'%}</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Pricing List v4 -->
+            </div>
+            <div class="col-md-4 md-margin-b-30">
+                <!-- Pricing List v4 -->
+                <div class="pricing-list-v4 radius-10">
+                    <div class="pricing-list-v4-header">
+                        <p class="pricing-list-v4-title">{%trans 'English'%}</p>
+                    </div>
+                    <div class="pricing-list-v4-content">
+                        <div class="center-block">
+						<a href="quiz/take_free_quiz/34/" class="btn-dark-brd btn-base-sm radius-3">{%trans 'Trial quiz'%}</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Pricing List v4 -->
+            </div>
+        </div>
+        <!--// end row -->
+    </div>
+</section>
+<section id="testimonials">
+	<div class="container">
+        <div class="row">
+                <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                    <!-- Carousel Slides / Quotes -->
+                    <div class="carousel-inner text-center">
+                        <!-- Quote 1 -->
+                        <div class="item active">
+                            <blockquote>
+                                <div class="row">
+                                        <p>"{%trans 'I am currently a student of BIL (KTL). I want to say that I used dayindal.com extensively to learn about Math and Logic. I would email the site for problem sets that I did not understand and they would write me back the correct way. It helped me a lot. That is why I would like to say big thank you to the site. I wish them to grow and prosper!'%}"</p>
+                                        <strong>{%trans 'Makhambet Gennadiyev' %}</strong>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <!-- Quote 2 -->
+                        <div class="item">
+                            <blockquote>
+                                <div class="row">
+                                        <p>"{%trans 'Good day, this is me Lunara. Thank you for this website. Thanks to this I am even studying well at school. I want you especially thank you for your recent promotional activity relating to stars. I really like this site. Thank you!'%}"</p>
+                                        <strong>{%trans 'Lunara (dayindal.com user from 2016)' %}</strong>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <!-- Quote 3 -->
+                        <div class="item">
+                            <blockquote>
+                                <div class="row">
+                                        <p>"{%trans 'I once stumbled upon this website and immediately registered. I had 9 students applying to NISH schools that year and I told them about the site because the site has a lot of nice problem sets. My students even won some of the group competitions organized by the site. Eventually 3 of my students got accepted to NISH. Even this year most of my students have registered and are active users of the site. I hope the site will grow and wish all the best to them.'%}"</p>
+                                        <strong>{%trans 'Aitanova Parasat (Informatics teacher, N35 school, Kyzylorda region)' %}</strong>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <!-- Bottom Carousel Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="{% static "img/Makhambet.jpg"%}" alt="">
+                        </li>
+                        <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="{% static "img/Lunara.png"%}" alt="">
+                        </li>
+                        <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="{% static "img/Parasat_apay.jpg"%}" alt="">
+                        </li>
+                    </ol>
+
+                    <!-- Carousel Buttons Next/Prev -->
+                    <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                    <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                </div>
+        </div>
+	</div>
+</section>
+<div id="register">
+	<div class="container text-center">
+		<h2>{% trans 'Register' %}</h2>
+		<form name="reg_form" role="form" accept-charset="UTF-8" action="{% url 'register' %}" method="POST" onsubmit="return validateForm();">
+	    {% csrf_token %}
+			<hr class="colorgraph">
+			<div class="form-group">
+				<input type="text" name="username" id="username" class="form-control input-lg" placeholder="{% trans 'Username' %}" tabindex="4">
+			</div>
+	    <div class="form-group">
+			<input type="email" name="email" id="email" class="form-control input-lg" placeholder="{% trans 'Email Address' %}" tabindex="4">
+		</div>
+		<div class="form-group">
+			<input type="password" name="password1" id="password1" class="form-control input-lg" placeholder="{% trans 'Password'%}" tabindex="5">
+		</div>
+		<div class="form-group">
+			<input type="password" name="password2" id="password2" class="form-control input-lg" placeholder="{% trans 'Re-enter password'%}" tabindex="6">
+		</div>
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-md-12"><input type="submit" value="{% trans 'Register'%}" class="btn btn-success btn-block btn-lg" tabindex="7"></div>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends '__base.html' %}
+{% load i18n %}
+{% load django_markdown %}
+{% block title %} {{ post.title }} {% endblock %}
+{% block page_header %} <span style="color: #993300"> {{ post.title }} </span> {% endblock %}
+
+{% block content %}
+    <div class="container" style="width: 85%">
+        <div class="span12 text-center">
+          <span class="badge"> {{ post.creation_date|date:"d-m-Y" }} </span>
+        </div>
+        <hr>
+        {% if post.content %}
+            <div style="font-family:arial; font-size:18px">{{ post.content|markdown}}</div>
+        {% endif %}
+    </div>
+{% endblock %}

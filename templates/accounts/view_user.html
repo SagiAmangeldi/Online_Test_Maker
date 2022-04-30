@@ -1,0 +1,14 @@
+{% extends "__base.html" %}
+{%load i18n %}
+{% block title %}{%trans "Profile Info"%}  {%endblock%}
+
+{% block content %}
+    <ul>
+        {%blocktrans with username=request.user.username email=request.user.email balance=request.user.balance %}
+            <li> Username: {{ username }} </li>
+            <li> E-mail: {{ email }} </li>
+            <li> Balance: {{ balance }} <span> <i class="glyphicon glyphicon-star"></i> </span> </li>
+            <li> <u> <a href="/accounts/password_reset"> Reset Password </a> </u> </li>
+        {%endblocktrans%}
+    </ul>
+{% endblock %}
